@@ -1,4 +1,4 @@
-package app.localhome.ui.components
+package app.betterhome.ui.components
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable

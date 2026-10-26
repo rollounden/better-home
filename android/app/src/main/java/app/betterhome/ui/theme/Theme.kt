@@ -1,4 +1,4 @@
-package app.localhome.ui.theme
+package app.betterhome.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -23,7 +23,7 @@ private val typography = base.copy(
 
 /** Colours come from the wallpaper (Material You); GrapheneOS supports it fully. */
 @Composable
-fun LocalHomeTheme(content: @Composable () -> Unit) {
+fun BetterHomeTheme(content: @Composable () -> Unit) {
     val context = LocalContext.current
     val dark = isSystemInDarkTheme()
     MaterialTheme(

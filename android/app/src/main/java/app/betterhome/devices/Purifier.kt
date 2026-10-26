@@ -1,7 +1,7 @@
-package app.localhome.devices
+package app.betterhome.devices
 
-import app.localhome.miio.MiioDevice
-import app.localhome.miio.Prop
+import app.betterhome.miio.MiioDevice
+import app.betterhome.miio.Prop
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.booleanOrNull
 import kotlinx.serialization.json.intOrNull

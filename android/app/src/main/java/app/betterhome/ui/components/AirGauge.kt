@@ -1,4 +1,4 @@
-package app.localhome.ui.components
+package app.betterhome.ui.components
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring

@@ -1,11 +1,11 @@
-package app.localhome.data
+package app.betterhome.data
 
 import android.content.Context
-import app.localhome.devices.Purifier
-import app.localhome.devices.PurifierState
-import app.localhome.miio.MiioDevice
-import app.localhome.miio.MiioException
-import app.localhome.miio.hexToBytes
+import app.betterhome.devices.Purifier
+import app.betterhome.devices.PurifierState
+import app.betterhome.miio.MiioDevice
+import app.betterhome.miio.MiioException
+import app.betterhome.miio.hexToBytes
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

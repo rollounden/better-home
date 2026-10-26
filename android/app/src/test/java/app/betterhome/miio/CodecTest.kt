@@ -1,4 +1,4 @@
-package app.localhome.miio
+package app.betterhome.miio
 
 import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertEquals

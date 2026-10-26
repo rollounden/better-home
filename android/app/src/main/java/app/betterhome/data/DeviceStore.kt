@@ -1,4 +1,4 @@
-package app.localhome.data
+package app.betterhome.data
 
 import android.content.Context
 import android.security.keystore.KeyGenParameterSpec
@@ -66,7 +66,7 @@ class DeviceStore(context: Context) {
 }
 
 private object Vault {
-    private const val ALIAS = "localhome.devices"
+    private const val ALIAS = "betterhome.devices"
     private const val IV = 12
 
     private fun key(): SecretKey {

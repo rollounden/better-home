@@ -1,4 +1,4 @@
-package app.localhome
+package app.betterhome
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -13,18 +13,18 @@ import androidx.compose.animation.slideOutHorizontally
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import app.localhome.ui.add.AddDeviceScreen
-import app.localhome.ui.home.HomeScreen
-import app.localhome.ui.purifier.PurifierScreen
-import app.localhome.ui.theme.LocalHomeTheme
+import app.betterhome.ui.add.AddDeviceScreen
+import app.betterhome.ui.home.HomeScreen
+import app.betterhome.ui.purifier.PurifierScreen
+import app.betterhome.ui.theme.BetterHomeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        val home = (application as LocalHomeApp).home
+        val home = (application as BetterHomeApp).home
         setContent {
-            LocalHomeTheme {
+            BetterHomeTheme {
                 val nav = rememberNavController()
                 NavHost(
                     nav,

@@ -15,15 +15,15 @@ val keystoreProps = Properties().apply {
 }
 
 android {
-    namespace = "app.localhome"
+    namespace = "app.betterhome"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "app.localhome"
+        applicationId = "app.betterhome"
         minSdk = 31
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 2
+        versionName = "0.2.0"
     }
 
     signingConfigs {

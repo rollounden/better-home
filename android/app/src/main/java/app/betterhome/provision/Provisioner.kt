@@ -1,4 +1,4 @@
-package app.localhome.provision
+package app.betterhome.provision
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -8,11 +8,11 @@ import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.net.wifi.WifiNetworkSpecifier
 import android.os.PatternMatcher
-import app.localhome.miio.Header
-import app.localhome.miio.MiioDevice
-import app.localhome.miio.MiioException
-import app.localhome.miio.discover
-import app.localhome.miio.toHex
+import app.betterhome.miio.Header
+import app.betterhome.miio.MiioDevice
+import app.betterhome.miio.MiioException
+import app.betterhome.miio.discover
+import app.betterhome.miio.toHex
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withTimeout

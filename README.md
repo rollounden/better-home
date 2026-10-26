@@ -1,4 +1,4 @@
-# Local Home
+# Better Home
 
 A private, local-first Android app for Xiaomi/Xiome smart-home devices. It talks
 to devices **directly over your Wi-Fi**. No account, no cloud, no telemetry, no
@@ -6,7 +6,7 @@ Google Play Services.
 
 ```
 ┌──────────────┐   miIO / UDP 54321   ┌──────────────┐
-│  Local Home  │ ───────────────────► │ air purifier │
+│  Better Home  │ ───────────────────► │ air purifier │
 │  (Android)   │ ◄─────────────────── │              │
 └──────────────┘   AES-128-CBC        └──────────────┘
        │
@@ -19,7 +19,7 @@ Built for GrapheneOS, installed via [Obtainium](https://github.com/ImranR98/Obta
 
 The vendor app is a 230 MB bundle with Facebook, Firebase Analytics, Tencent
 Bugly, Getui and an advertising-ID client, and it allows cleartext HTTP
-app-wide. See [PRIVACY.md](PRIVACY.md). Local Home is ~2.5 MB with zero
+app-wide. See [PRIVACY.md](PRIVACY.md). Better Home is ~2.5 MB with zero
 third-party SDKs.
 
 ## Supported devices
@@ -30,7 +30,7 @@ third-party SDKs.
 
 The property map comes from the official MIoT spec
 (`urn:miot-spec-v2:device:air-purifier:0000A007:xiaomi-cpa4:2`). New device
-types go in `android/app/src/main/java/app/localhome/devices/`.
+types go in `android/app/src/main/java/app/betterhome/devices/`.
 
 ## Install on the phone (Obtainium)
 

@@ -1,4 +1,4 @@
-package app.localhome.ui.home
+package app.betterhome.ui.home
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
@@ -51,14 +51,14 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import app.localhome.data.Home
-import app.localhome.data.Live
-import app.localhome.data.SavedDevice
-import app.localhome.data.stateOrNull
-import app.localhome.devices.PurifierMode
-import app.localhome.ui.PollWhileResumed
-import app.localhome.ui.components.AirBand
-import app.localhome.ui.components.PowerToggle
+import app.betterhome.data.Home
+import app.betterhome.data.Live
+import app.betterhome.data.SavedDevice
+import app.betterhome.data.stateOrNull
+import app.betterhome.devices.PurifierMode
+import app.betterhome.ui.PollWhileResumed
+import app.betterhome.ui.components.AirBand
+import app.betterhome.ui.components.PowerToggle
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 import java.time.LocalTime

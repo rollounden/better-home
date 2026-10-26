@@ -1,4 +1,4 @@
-package app.localhome.ui
+package app.betterhome.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect

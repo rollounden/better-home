@@ -19,14 +19,14 @@
         android:maxSdkVersion="32" />
 
     <application
-        android:name=".LocalHomeApp"
+        android:name=".BetterHomeApp"
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher"
-        android:label="Local Home"
+        android:label="Better Home"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LocalHome"
+        android:theme="@style/Theme.BetterHome"
         android:enableOnBackInvokedCallback="true"
         tools:targetApi="35">
         <activity

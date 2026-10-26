@@ -1,4 +1,4 @@
-package app.localhome.miio
+package app.betterhome.miio
 
 import java.io.IOException
 import java.nio.ByteBuffer

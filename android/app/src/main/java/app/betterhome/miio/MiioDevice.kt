@@ -1,4 +1,4 @@
-package app.localhome.miio
+package app.betterhome.miio
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex

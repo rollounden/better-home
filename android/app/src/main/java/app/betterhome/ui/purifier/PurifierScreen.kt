@@ -1,4 +1,4 @@
-package app.localhome.ui.purifier
+package app.betterhome.ui.purifier
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
@@ -77,20 +77,20 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import app.localhome.data.Home
-import app.localhome.data.Live
-import app.localhome.data.SavedDevice
-import app.localhome.data.stateOrNull
-import app.localhome.devices.Brightness
-import app.localhome.devices.Cpa4
-import app.localhome.devices.Purifier
-import app.localhome.devices.PurifierMode
-import app.localhome.devices.PurifierState
-import app.localhome.ui.PollWhileResumed
-import app.localhome.ui.components.AirBand
-import app.localhome.ui.components.AirGauge
-import app.localhome.ui.components.PowerToggle
-import app.localhome.ui.components.Section
+import app.betterhome.data.Home
+import app.betterhome.data.Live
+import app.betterhome.data.SavedDevice
+import app.betterhome.data.stateOrNull
+import app.betterhome.devices.Brightness
+import app.betterhome.devices.Cpa4
+import app.betterhome.devices.Purifier
+import app.betterhome.devices.PurifierMode
+import app.betterhome.devices.PurifierState
+import app.betterhome.ui.PollWhileResumed
+import app.betterhome.ui.components.AirBand
+import app.betterhome.ui.components.AirGauge
+import app.betterhome.ui.components.PowerToggle
+import app.betterhome.ui.components.Section
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 

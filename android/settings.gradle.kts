@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "LocalHome"
+rootProject.name = "BetterHome"
 include(":app")

@@ -1,4 +1,4 @@
-package app.localhome.ui.add
+package app.betterhome.ui.add
 
 import android.Manifest
 import androidx.activity.compose.BackHandler
@@ -70,14 +70,14 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import app.localhome.data.Home
-import app.localhome.data.SavedDevice
-import app.localhome.miio.Found
-import app.localhome.miio.MiioDevice
-import app.localhome.miio.discover
-import app.localhome.miio.hexToBytes
-import app.localhome.provision.Provisioner
-import app.localhome.provision.Step
+import app.betterhome.data.Home
+import app.betterhome.data.SavedDevice
+import app.betterhome.miio.Found
+import app.betterhome.miio.MiioDevice
+import app.betterhome.miio.discover
+import app.betterhome.miio.hexToBytes
+import app.betterhome.provision.Provisioner
+import app.betterhome.provision.Step
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
