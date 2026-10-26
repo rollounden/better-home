@@ -46,11 +46,30 @@ reach devices on your Wi-Fi.
 
 ## Adding a device
 
-* **Pair a new device:** hold the purifier's button until the Wi-Fi light
-  blinks, enter your 2.4 GHz Wi-Fi details, then choose the device's setup
-  network when Android asks. Your normal Wi-Fi stays connected.
-* **Find on this network:** for devices already on your Wi-Fi.
-* **Enter IP and token:** if you already have the 32-character token.
+Better Home adds devices by **IP address and token**. Purifiers it finds on
+your Wi-Fi are offered as tap-to-fill chips.
+
+### Getting the token, without leaving Xiaomi a way in
+
+The cpa4 firmware generates a new, secret token when it joins Wi-Fi. That
+happens even with internet blocked, and it ignores a token passed in
+`miIO.config_router`. The Xiaomi app receives the new token from the device
+during pairing (it's a `_mibt` Bluetooth combo device) and stores it in your
+Xiaomi account. So the token has to come from the account once:
+
+1. **Block the purifier's internet at your router** (by MAC address) before
+   pairing. Pairing still works, because the phone relays the token.
+2. Pair it once in the Xiaomi app.
+3. Run [Xiaomi-cloud-tokens-extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor)
+   and log in with its QR code option. It lists each device's IP and token.
+4. In Better Home: **Add device**, tap the IP, paste the token.
+
+With internet blocked, the token stays valid until the purifier is re-paired,
+and Xiaomi can't reach the device.
+
+To put a Compact 4 back into setup mode, hold the **light button for 7
+seconds** until it beeps and the Wi-Fi light blinks. Holding light + mode
+together turns Wi-Fi off and on instead.
 
 ## Build
 

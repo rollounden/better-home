@@ -22,8 +22,8 @@ android {
         applicationId = "app.betterhome"
         minSdk = 31
         targetSdk = 35
-        versionCode = 2
-        versionName = "0.2.0"
+        versionCode = 3
+        versionName = "0.3.0"
     }
 
     signingConfigs {
@@ -39,6 +39,7 @@ android {
 
     buildTypes {
         release {
+            resValue("string", "app_name", "Better Home")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
@@ -46,6 +47,7 @@ android {
         }
         debug {
             applicationIdSuffix = ".debug"
+            resValue("string", "app_name", "Better Home (debug)")
         }
     }
 

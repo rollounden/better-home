@@ -252,7 +252,8 @@ private fun statusLine(live: Live): String = when (live) {
 private fun greeting(): String = when (LocalTime.now().hour) {
     in 5..11 -> "Good morning"
     in 12..17 -> "Good afternoon"
-    else -> "Good evening"
+    in 18..22 -> "Good evening"
+    else -> "Good night"
 }
 
 private fun summary(devices: List<SavedDevice>, live: Map<String, Live>): String {

@@ -20,8 +20,11 @@ import java.net.DatagramSocket
 import java.net.InetAddress
 import java.net.SocketTimeoutException
 
-/** Opens the UDP socket; lets provisioning bind it to the device's own AP network. */
+/** Opens the UDP socket; injectable for tests. */
 typealias SocketFactory = () -> DatagramSocket
+
+class WrongTokenException(ip: String, cause: Throwable?) :
+    MiioException("$ip is on the network but rejects the saved token. It has probably changed.", cause)
 
 /** A miot property address: service id + property id. */
 data class Prop(val siid: Int, val piid: Int)
@@ -61,14 +64,21 @@ class MiioDevice(
     suspend fun call(method: String, params: JsonElement = JsonArray(emptyList())): JsonElement =
         lock.withLock {
             var last: Exception? = null
+            var helloAnswered = false
             repeat(3) { attempt ->
                 try {
-                    if (deviceId == 0L || attempt > 0 || ageSeconds() > 120) helloLocked()
+                    if (deviceId == 0L || attempt > 0 || ageSeconds() > 120) {
+                        helloLocked()
+                        helloAnswered = true
+                    }
                     return@withLock send(method, params)
                 } catch (e: SocketTimeoutException) {
                     last = e
                 }
             }
+            // Devices silently drop packets encrypted with the wrong token, so
+            // "answers hello, ignores commands" means the token is wrong.
+            if (helloAnswered) throw WrongTokenException(ip, last)
             throw MiioException("$ip did not answer", last)
         }
 

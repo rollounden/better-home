@@ -5,18 +5,6 @@
     <!-- LAN only: miIO over UDP. GrapheneOS's Network toggle must stay on for this app. -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-
-    <!-- Pairing: lets Android show the device's setup network. Not used for location. -->
-    <uses-permission
-        android:name="android.permission.NEARBY_WIFI_DEVICES"
-        android:usesPermissionFlags="neverForLocation"
-        tools:targetApi="33" />
-    <uses-permission
-        android:name="android.permission.ACCESS_FINE_LOCATION"
-        android:maxSdkVersion="32" />
 
     <application
         android:name=".BetterHomeApp"
@@ -24,7 +12,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher"
-        android:label="Better Home"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.BetterHome"
         android:enableOnBackInvokedCallback="true"

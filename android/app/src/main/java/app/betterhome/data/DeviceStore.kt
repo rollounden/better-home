@@ -47,6 +47,13 @@ class DeviceStore(context: Context) {
         if (list.any { it.id == device.id }) list.map { if (it.id == device.id) device else it } else list + device
     }
 
+    /** Add a newly paired device; re-pairing one we already know replaces its address and token. */
+    suspend fun addOrReplace(device: SavedDevice) = mutate { list ->
+        val existing = list.firstOrNull { it.deviceId == device.deviceId }
+        if (existing == null) list + device
+        else list.map { if (it.id == existing.id) device.copy(id = existing.id) else it }
+    }
+
     suspend fun remove(id: String) = mutate { list -> list.filterNot { it.id == id } }
 
     private suspend fun mutate(f: (List<SavedDevice>) -> List<SavedDevice>) {

@@ -48,7 +48,7 @@ object Miio {
     }
 }
 
-class MiioException(message: String, cause: Throwable? = null) : IOException(message, cause)
+open class MiioException(message: String, cause: Throwable? = null) : IOException(message, cause)
 
 class Header(val length: Int, val deviceId: Long, val stamp: Long, val checksum: ByteArray) {
     /** The token a device leaks in its hello reply, or null once it is provisioned. */
