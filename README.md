@@ -34,10 +34,12 @@ types go in `android/app/src/main/java/app/betterhome/devices/`.
 
 ## Install on the phone (Obtainium)
 
-1. In Obtainium, **Add app** → paste this repo's GitHub URL.
-2. The repo is private, so add a GitHub personal access token in
-   Obtainium's settings (fine-grained, read-only **Contents** on this repo).
-3. Install. Updates arrive whenever a new release is tagged.
+1. In Obtainium, **Add app** → paste `https://github.com/rollounden/better-home`.
+2. Install. Updates arrive whenever a new release is tagged.
+
+Releases are signed with a certificate whose SHA-256 is
+`dcde5ff4310721613d72619e68ebf4e4d69b44480e84c1e7884089c6b3a27cb3`.
+Check it with AppVerifier if you're installing by hand.
 
 On GrapheneOS, keep the app's **Network** permission on, because it needs it to
 reach devices on your Wi-Fi.
@@ -84,4 +86,4 @@ key. If you lose it, you'll have to uninstall and reinstall the app.
 
 ## Licence
 
-AGPL-3.0-or-later.
+[AGPL-3.0-or-later](LICENSE).
